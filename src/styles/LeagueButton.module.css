@@ -1,0 +1,14 @@
+.league_button {
+  height: 3em;
+  width: 20em;
+  background-color: #1b8e77;
+  border-radius: 1.5em;
+  display: flex;
+  align-items: center;
+  padding-left: 10px;
+  flex-wrap: wrap;
+}
+
+.league_button p {
+  color: #333;
+}

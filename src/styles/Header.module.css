@@ -1,0 +1,16 @@
+.header {
+  background-color: #1b8e77;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.title {
+  text-decoration: none;
+  color: #fff;
+}
+
+.header h1 {
+  padding: 0.5em;
+}
