@@ -10,7 +10,7 @@ export default function Layout({ children }: LayoutProps) {
   return (
     <>
       <Header />
-      <main className={styles.main}>{children}</main>
+      {children}
       <footer></footer>
     </>
   );

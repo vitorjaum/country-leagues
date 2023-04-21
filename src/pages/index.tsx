@@ -27,8 +27,7 @@ export async function getStaticProps() {
 }
 
 export default function Home({ leagues }: leagueProps) {
-  const leaguesInfo = leagues.data;
-
+  const leaguesInfo = leagues?.data;
   return (
     <>
       <Head>
@@ -38,18 +37,13 @@ export default function Home({ leagues }: leagueProps) {
         <link rel="shortcut icon" href="futIcon.png" />
       </Head>
 
-      <nav>
-        {leaguesInfo.map((league: leagueProps, idx) => {
-          return <LeagueButton name={league.name} id={league.id} key={idx} />;
-        })}
-      </nav>
-      {/* <div>
-        <Link legacyBehavior href={"youtube.com"}>
-          <a>
-            <div className={styles.leagues_button}>BRASILEIRÃO</div>
-          </a>
-        </Link>
-      </div> */}
+      <main className={styles.main}>
+        <nav className={styles.navButtons}>
+          {leaguesInfo.map((league: leagueProps, idx) => {
+            return <LeagueButton name={league.name} id={league.id} key={idx} />;
+          })}
+        </nav>
+      </main>
     </>
   );
 }

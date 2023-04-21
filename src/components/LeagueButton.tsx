@@ -10,12 +10,12 @@ export default function LeagueButton(leagueProps: leagueProps) {
   const { name, id } = leagueProps;
 
   return (
-    <div className={styles.league_button}>
+    <>
       <Link legacyBehavior href={`/leagues/${id}`}>
-        <a>
+        <div className={styles.league_button}>
           <p className={styles.leagues_button}>{name}</p>
-        </a>
+        </div>
       </Link>
-    </div>
+    </>
   );
 }

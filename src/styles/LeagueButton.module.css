@@ -1,14 +1,17 @@
 .league_button {
   height: 3em;
-  width: 20em;
+  width: 19em;
+  margin: 0.5em;
   background-color: #1b8e77;
   border-radius: 1.5em;
   display: flex;
   align-items: center;
-  padding-left: 10px;
+  justify-content: center;
   flex-wrap: wrap;
+  cursor: pointer;
 }
 
 .league_button p {
+  text-align: center;
   color: #333;
 }
