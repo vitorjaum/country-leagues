@@ -4,13 +4,15 @@ import Link from "next/link";
 import LeagueButton from "@/components/LeagueButton";
 
 interface leagueProps {
-  name: string;
   id: string;
-  leagues: {
-    name: string;
-    data: string[];
-  };
+  name: string;
 }
+
+type dataApi = {
+  leagues: {
+    data: Array<leagueProps>;
+  };
+};
 
 export async function getStaticProps() {
   const res = await fetch("http://api-football-standings.azharimm.dev/leagues");
@@ -19,6 +21,7 @@ export async function getStaticProps() {
   data.data.map((league: leagueProps) => {
     league.id == "bra.1" && (league.name = "Brasileirão Serie A");
   });
+
   return {
     props: {
       leagues: data,
@@ -26,8 +29,9 @@ export async function getStaticProps() {
   };
 }
 
-export default function Home({ leagues }: leagueProps) {
+export default function Home({ leagues }: dataApi) {
   const leaguesInfo = leagues?.data;
+  console.log(leagues);
   return (
     <>
       <Head>
@@ -39,7 +43,7 @@ export default function Home({ leagues }: leagueProps) {
 
       <main className={styles.main}>
         <nav className={styles.navButtons}>
-          {leaguesInfo.map((league: leagueProps, idx) => {
+          {leaguesInfo.map((league, idx) => {
             return <LeagueButton name={league.name} id={league.id} key={idx} />;
           })}
         </nav>
