@@ -6,6 +6,7 @@ import LeagueButton from "@/components/LeagueButton";
 interface leagueProps {
   id: string;
   name: string;
+  logos: { dark: string; light: string };
 }
 
 type dataApi = {
@@ -31,7 +32,7 @@ export async function getStaticProps() {
 
 export default function Home({ leagues }: dataApi) {
   const leaguesInfo = leagues?.data;
-  console.log(leagues);
+
   return (
     <>
       <Head>
@@ -44,7 +45,7 @@ export default function Home({ leagues }: dataApi) {
       <main className={styles.main}>
         <nav className={styles.navButtons}>
           {leaguesInfo.map((league, idx) => {
-            return <LeagueButton name={league.name} id={league.id} key={idx} />;
+            return <LeagueButton info={league} key={idx} />;
           })}
         </nav>
       </main>

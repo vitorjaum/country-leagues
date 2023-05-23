@@ -2,6 +2,9 @@
   height: 3em;
   width: 19em;
   margin: 0.5em;
+  background-size: contain;
+  background-repeat: no-repeat;
+  /* background-position: center; */
   background-color: #1b8e77;
   border-radius: 1.5em;
   display: flex;
