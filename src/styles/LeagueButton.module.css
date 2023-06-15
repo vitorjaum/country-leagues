@@ -1,12 +1,12 @@
-.league_button {
+/* .league_button {
   height: 3em;
   width: 19em;
   margin: 0.5em;
   background-size: contain;
   background-repeat: no-repeat;
-  /* background-position: center; */
-  background-color: #1b8e77;
+  background-color: #5ea13c;
   border-radius: 1.5em;
+  border: solid black 12px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -17,4 +17,25 @@
 .league_button p {
   text-align: center;
   color: #333;
+} */
+
+.league_button {
+  height: 10em;
+  width: 10em;
+  border: 0.2em solid black;
+  border-radius: 20px;
+  background-color: #4ca137;
+  background-size: 80%;
+  background-position: center;
+  background-repeat: no-repeat;
+  cursor: pointer;
+}
+
+.league_button image {
+  width: 20px;
+  height: 20px;
+}
+
+.league_button p {
+  color: whitesmoke;
 }
