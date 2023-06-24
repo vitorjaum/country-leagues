@@ -1,41 +1,26 @@
-/* .league_button {
-  height: 3em;
-  width: 19em;
-  margin: 0.5em;
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-color: #5ea13c;
-  border-radius: 1.5em;
-  border: solid black 12px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
-  cursor: pointer;
-}
-
-.league_button p {
-  text-align: center;
-  color: #333;
-} */
-
-.league_button {
-  height: 10em;
+.league_container {
   width: 10em;
-  border: 0.2em solid black;
-  border-radius: 20px;
-  background-color: #4ca137;
-  background-size: 80%;
-  background-position: center;
-  background-repeat: no-repeat;
+  height: 10em;
   cursor: pointer;
+  background-color: #4ca137;
+  border-radius: 10px;
+  border: 0.2em solid black;
+  border-radius: 10px;
+  background-size: 7em;
+  background-repeat: no-repeat;
+  background-position: top;
+  display: flex;
+  align-items: end;
+  justify-content: center;
+  padding-bottom: 0.5em;
 }
 
-.league_button image {
-  width: 20px;
-  height: 20px;
+.league_container:hover {
+  background-size: 8em;
+  transition: 0.6s;
 }
 
-.league_button p {
+.league_container p {
   color: whitesmoke;
+  bottom: 0;
 }

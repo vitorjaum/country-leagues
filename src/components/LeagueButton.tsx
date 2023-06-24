@@ -21,12 +21,10 @@ export default function LeagueButton({ info }: leagueProps) {
         style={{ backgroundColor: "red" }}
       >
         <div
-          className={styles.league_button}
-          style={{
-            backgroundImage: `url(${trophy})`,
-          }}
+          className={styles.league_container}
+          style={{ backgroundImage: `url(${trophy})` }}
         >
-          <p className={styles.leagues_button}>{name}</p>
+          <p>{name}</p>
         </div>
       </Link>
     </>

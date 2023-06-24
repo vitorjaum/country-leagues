@@ -2,6 +2,7 @@ import Head from "next/head";
 import styles from "@/styles/Home.module.css";
 import Link from "next/link";
 import LeagueButton from "@/components/LeagueButton";
+import { Footer } from "@/components/Footer";
 
 interface leagueProps {
   id: string;
@@ -43,12 +44,13 @@ export default function Home({ leagues }: dataApi) {
       </Head>
 
       <main className={styles.main}>
-        <nav className={styles.navButtons}>
+        <nav className={styles.nav_buttons}>
           {leaguesInfo.map((league, idx) => {
             return <LeagueButton info={league} key={idx} />;
           })}
         </nav>
       </main>
+      <Footer />
     </>
   );
 }

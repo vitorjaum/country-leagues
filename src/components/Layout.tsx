@@ -10,8 +10,10 @@ export default function Layout({ children }: LayoutProps) {
   return (
     <>
       <Header />
-      {children}
-      <footer></footer>
+      <div className={styles.mainContainer}>{children}</div>
+      <footer>
+        <h1>Lorem ipsum dolor</h1>
+      </footer>
     </>
   );
 }
