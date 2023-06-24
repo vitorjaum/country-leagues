@@ -1,6 +1,14 @@
-.navButtons {
+.nav_buttons {
   display: flex;
-  align-items: center;
   justify-content: center;
   flex-wrap: wrap;
+  width: 100%;
+  gap: 0.5em;
+  padding-top: 1em;
+}
+
+.main {
+  display: flex;
+  justify-content: center;
+  padding: 0 5em;
 }
