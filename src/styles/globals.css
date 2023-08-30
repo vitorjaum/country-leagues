@@ -1,3 +1,9 @@
+:root {
+  --bg-color: #171717;
+  --green-color: #10502f;
+  --font-color: #bdc1c6;
+}
+
 * {
   padding: 0;
   margin: 0;
@@ -5,5 +11,5 @@
 }
 
 body {
-  background-color: #1f251b;
+  background-color: var(--bg-color);
 }

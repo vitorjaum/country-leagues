@@ -1,5 +1,5 @@
 .header {
-  background-color: #1b8e77;
+  background-color: var(--green-color);
   width: 100%;
   display: flex;
   align-items: center;
@@ -8,7 +8,7 @@
 
 .title {
   text-decoration: none;
-  color: #fff;
+  color: var(--font-color);
 }
 
 .header h1 {

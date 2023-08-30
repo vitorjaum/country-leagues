@@ -1,4 +1,5 @@
 .mainContainer {
-  background-color: #1f251b;
+  color: var(--font-color);
+  font-family: arial, sans-serif;
   height: 100%;
 }
