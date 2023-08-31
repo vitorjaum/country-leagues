@@ -1,6 +1,7 @@
 :root {
   --bg-color: #171717;
-  --green-color: #10502f;
+  --green-dark: #10502f;
+  --green-light: #009554;
   --font-color: #bdc1c6;
 }
 

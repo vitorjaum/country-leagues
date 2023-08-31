@@ -50,7 +50,6 @@ export default function Home({ leagues }: dataApi) {
           })}
         </nav>
       </main>
-      <Footer />
     </>
   );
 }

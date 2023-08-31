@@ -2,7 +2,7 @@
   width: 10em;
   height: 10em;
   cursor: pointer;
-  background-color: #4ca137;
+  background-color: var(--green-light);
   border-radius: 10px;
   border: 0.2em solid black;
   border-radius: 10px;
@@ -10,7 +10,7 @@
   background-repeat: no-repeat;
   background-position: top;
   display: flex;
-  align-items: end;
+  align-items: flex-end;
   justify-content: center;
   padding-bottom: 0.5em;
 }
