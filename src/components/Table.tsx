@@ -16,14 +16,14 @@ export function Table({ standings }: standingsProps) {
       <thead>
         <tr>
           <td>#</td>
-          <td>Name:</td>
-          <td>Points:</td>
-          <td>Games Played:</td>
-          <td>Wins:</td>
-          <td>Draws:</td>
-          <td>Losses:</td>
-          <td>Goals:</td>
-          <td>Points Differential:</td>
+          <td className={styles.club_column}>Name</td>
+          <td>Points</td>
+          <td>Games Played</td>
+          <td>Wins</td>
+          <td>Draws</td>
+          <td>Losses</td>
+          <td>Goals</td>
+          <td>Points Differential</td>
         </tr>
       </thead>
       <tbody>
@@ -48,7 +48,7 @@ export function Table({ standings }: standingsProps) {
           return (
             <tr key={idx}>
               <td>{rank}</td>
-              <td>
+              <td className={styles.club_column}>
                 <Image
                   alt={`logo of ${name}`}
                   src={logos}
