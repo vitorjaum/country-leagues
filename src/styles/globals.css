@@ -9,8 +9,16 @@
   padding: 0;
   margin: 0;
   text-decoration: none;
+  color: inherit;
 }
 
 body {
   background-color: var(--bg-color);
+  min-height: 100vh;
+}
+
+#__next {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }

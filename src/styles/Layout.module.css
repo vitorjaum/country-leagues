@@ -1,5 +1,6 @@
 .mainContainer {
   color: var(--font-color);
   font-family: arial, sans-serif;
+  flex: 1;
   height: 100%;
 }
