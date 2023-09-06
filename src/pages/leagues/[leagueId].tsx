@@ -1,4 +1,5 @@
 import { Table } from "@/components/Table";
+import Head from "next/head";
 
 type leagueProps = {
   name: string;
@@ -37,10 +38,14 @@ export async function getStaticProps(context: contextProps) {
 
 export default function League({ standings }: any) {
   const standingsList = standings.standings;
+  const leagueName = standings.name;
 
   return (
-    <div>
+    <>
+      <Head>
+        <title>{leagueName}</title>
+      </Head>
       <Table standings={standingsList} />
-    </div>
+    </>
   );
 }
