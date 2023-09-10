@@ -1,7 +1,10 @@
+.table_container {
+  margin: 2em auto;
+}
+
 .table {
   background-color: var(--table-bg);
   border-collapse: collapse;
-  margin: 2em auto;
   font-size: 14px;
 }
 
@@ -30,4 +33,13 @@
 
 .club_column img {
   margin-right: 0.3em;
+}
+
+.abbreviations_meaning {
+  background-color: var(--table-bg);
+  margin-top: 1em;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  padding: 1.5em 0;
 }
