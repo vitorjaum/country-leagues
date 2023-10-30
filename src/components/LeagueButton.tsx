@@ -15,11 +15,7 @@ export default function LeagueButton({ info }: leagueProps) {
   const trophy = logos?.light;
   return (
     <>
-      <Link
-        legacyBehavior
-        href={`/leagues/${id}`}
-        style={{ backgroundColor: "red" }}
-      >
+      <Link legacyBehavior href={`/${id}`} style={{ backgroundColor: "red" }}>
         <div
           className={styles.league_container}
           style={{ backgroundImage: `url(${trophy})` }}

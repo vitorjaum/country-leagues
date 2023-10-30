@@ -1,8 +1,6 @@
 import Head from "next/head";
 import styles from "@/styles/Home.module.css";
-import Link from "next/link";
 import LeagueButton from "@/components/LeagueButton";
-import { Footer } from "@/components/Footer";
 
 interface leagueProps {
   id: string;
@@ -19,10 +17,6 @@ type dataApi = {
 export async function getStaticProps() {
   const res = await fetch("http://api-football-standings.azharimm.dev/leagues");
   const data = await res.json();
-
-  data.data.map((league: leagueProps) => {
-    league.id == "bra.1" && (league.name = "Brasileirão Serie A");
-  });
 
   return {
     props: {

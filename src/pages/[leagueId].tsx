@@ -1,3 +1,4 @@
+import styles from "../styles/LeaguePage.module.css";
 import { Table } from "@/components/Table";
 import Head from "next/head";
 
@@ -45,7 +46,9 @@ export default function League({ standings }: any) {
       <Head>
         <title>{leagueName}</title>
       </Head>
-      <Table standings={standingsList} />
+      <div className={styles.main}>
+        <Table standings={standingsList} />
+      </div>
     </>
   );
 }
