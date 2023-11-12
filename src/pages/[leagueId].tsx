@@ -1,6 +1,7 @@
 import styles from "../styles/LeaguePage.module.css";
 import { Table } from "@/components/Table";
 import Head from "next/head";
+import Image from "next/image";
 
 type leagueProps = {
   name: string;
@@ -12,6 +13,19 @@ type contextProps = {
   params: {
     leagueId: string;
   };
+  items: {
+    name: string;
+  };
+};
+
+type compProps = {
+  standings: [
+    {
+      team: { name: string; logos: [{ href: string }] };
+      stats: [{ name: string; value: string | number }];
+    }
+  ];
+  leagueData: { name: string; logos: { light: string } };
 };
 
 export async function getStaticPaths() {
@@ -34,12 +48,18 @@ export async function getStaticProps(context: contextProps) {
   );
   const data = await res.json();
 
-  return { props: { standings: data.data } };
+  const res2 = await fetch(
+    `http://api-football-standings.azharimm.dev/leagues/${id}`
+  );
+  const data2 = await res2.json();
+
+  return { props: { standings: data.data.standings, leagueData: data2.data } };
 }
 
-export default function League({ standings }: any) {
-  const standingsList = standings.standings;
-  const leagueName = standings.name;
+export default function League({ standings, leagueData }: compProps) {
+  const standingsList = standings;
+  const leagueName = leagueData.name;
+  const leagueTrophy = leagueData.logos.light;
 
   return (
     <>
@@ -47,6 +67,12 @@ export default function League({ standings }: any) {
         <title>{leagueName}</title>
       </Head>
       <div className={styles.main}>
+        <Image
+          src={leagueTrophy}
+          width={120}
+          height={120}
+          alt="League Trophy"
+        />
         <Table standings={standingsList} />
       </div>
     </>
